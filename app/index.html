@@ -2,35 +2,41 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
+	<link rel="icon" type="image/ico" href="favicon.ico"/>
+	<link rel="stylesheet" href="assets/css/style.css">
 	<title>Calculo de combustível</title>
 </head>
 <body>
-	<h1>Calcula combustivel</h1><br>
-	<small>Versão básica inicial</small>
-	<br><br>
+	<section id="calculo">
+		<h1>Calcula combustivel</h1><br>
+		<small>Versão básica inicial</small>
+		<form action="#" onsubmit="calculo();">
+			<label for="kmLitroCarro">Quantos Quilometros o carro anda por litro</label>
+			<input type="text" id="kmLitroCarro">
+			<br>
 
-	<form action="#" onsubmit="calculo();">
-		<label for="kmLitroCarro">Quantos Quilometros o carro anda por litro</label>
-		<input type="text" id="kmLitroCarro">
+			<label for="precoGasolina">Preço litro Gasolina</label>
+			<input type="text" id="precoGasolina">
+			<br>
+
+			<label for="distancia">Distancia a ser percorrida (em KM)</label>
+			<input type="text" id="distancia">
+			<br>
+
+			<input type="submit">
+		</form>
+		<br><br>
+
+		<p>Média de consumo combustível:
+			<strong>
+				<span id="resultadoMediaConsumo"></span>
+				<small>litros</small>
+			</strong>
+		</p>
+
 		<br>
-
-		<label for="precoGasolina">Preço litro Gasolina</label>
-		<input type="text" id="precoGasolina">
-		<br>
-
-		<label for="distancia">Distancia a ser percorrida (em KM)</label>
-		<input type="text" id="distancia">
-		<br>
-
-		<input type="submit">
-	</form>
-	<br><br>
-
-	<p>Média de consumo combustível: <strong><span id="resultadoMediaConsumo"></span> <small>litros</small></strong></p>
-
-	<br>
-	<p>Média do valor a ser gasto: <strong>R$<span id="resultadoPreco"></span></strong></p>
-
+		<p>Média do valor a ser gasto: <strong>R$<span id="resultadoPreco"></span></strong></p>
+	</section>
 	<script type="text/javascript">
 		function calculo() {
 			var distancia = document.getElementById("distancia").value;
