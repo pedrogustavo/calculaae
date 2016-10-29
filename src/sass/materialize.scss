@@ -4,7 +4,7 @@
 @import "components/normalize";
 
 // Mixins
-// @import "components/prefixer";
+@import "components/prefixer";
 @import "components/mixins";
 @import "components/color";
 
@@ -13,4 +13,5 @@
 
 // components
 @import "components/grid";
+@import "components/forms/forms";
 @import "home";

@@ -8,36 +8,54 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-	<section id="calculo">
-		<h1>Calcula combustivel</h1><br>
-		<small>Versão básica inicial</small>
-		<form action="#" onsubmit="calculo();">
-			<label for="kmLitroCarro">Quantos Quilometros o carro anda por litro</label>
-			<input type="text" id="kmLitroCarro">
+<div class="row top-nav">
+	<div class="container">
+		<div class="row">
+			<div class="col s12 m6 offset-m3">
+				<p><b>Calcula Ae</b> - Cálculo de combustível</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<section class="col s12 m6 offset-m3">
+			<form action="#" onsubmit="calculo();">
+			<div class="row">
+				<div class="input-field col s12">
+					<label for="first_name">First Name</label>
+		        	<input placeholder="Placeholder" id="first_name" type="text" class="">
+		        </div>
+			</div>
+				<label for="kmLitroCarro">Quantos Quilometros o carro anda por litro</label>
+				<input type="text" id="kmLitroCarro">
+				<br>
+
+				<label for="precoGasolina">Preço litro Gasolina</label>
+				<input type="text" id="precoGasolina">
+				<br>
+
+				<label for="distancia">Distancia a ser percorrida (em KM)</label>
+				<input type="text" id="distancia">
+				<br>
+
+				<input type="submit">
+			</form>
+			<br><br>
+
+			<p>Média de consumo combustível:
+				<strong>
+					<span id="resultadoMediaConsumo"></span>
+					<small>litros</small>
+				</strong>
+			</p>
+
 			<br>
+			<p>Média do valor a ser gasto: <strong>R$<span id="resultadoPreco"></span></strong></p>
+		</section>
+	</div>
+</div>
 
-			<label for="precoGasolina">Preço litro Gasolina</label>
-			<input type="text" id="precoGasolina">
-			<br>
-
-			<label for="distancia">Distancia a ser percorrida (em KM)</label>
-			<input type="text" id="distancia">
-			<br>
-
-			<input type="submit">
-		</form>
-		<br><br>
-
-		<p>Média de consumo combustível:
-			<strong>
-				<span id="resultadoMediaConsumo"></span>
-				<small>litros</small>
-			</strong>
-		</p>
-
-		<br>
-		<p>Média do valor a ser gasto: <strong>R$<span id="resultadoPreco"></span></strong></p>
-	</section>
 	<script type="text/javascript">
 		function calculo() {
 			var distancia = document.getElementById("distancia").value;
@@ -55,5 +73,6 @@
 
 		}
 	</script>
+	<script src="assets/js/global.js"></script>
 </body>
 </html>
