@@ -24,7 +24,7 @@ var banner = [
 ].join('');
 
 gulp.task('css', function () {
-    return gulp.src('src/sass/style.sass')
+    return gulp.src('src/sass/materialize.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 4 version'))
