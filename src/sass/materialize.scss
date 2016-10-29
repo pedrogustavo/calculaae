@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+// Reset
+@import "components/normalize";
+
 // Mixins
 // @import "components/prefixer";
 @import "components/mixins";
@@ -8,11 +11,6 @@
 // Variables;
 @import "components/variables";
 
-// Reset
-@import "components/normalize";
-
 // components
-@import "components/global";
-@import "components/icons-material-design";
 @import "components/grid";
 @import "home";
