@@ -8,7 +8,9 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     cssnano = require('gulp-cssnano'),
     sourcemaps = require('gulp-sourcemaps'),
+	ghPages = require('gulp-gh-pages'),
     package = require('./package.json');
+
 
 
 var banner = [
@@ -61,6 +63,11 @@ gulp.task('browser-sync', function() {
 });
 gulp.task('bs-reload', function () {
     browserSync.reload();
+});
+
+gulp.task('ghpages', function() {
+  return gulp.src('./app/**/*')
+    .pipe(ghPages());
 });
 
 gulp.task('default', ['css', 'js', 'browser-sync'], function () {
