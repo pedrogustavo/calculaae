@@ -21,9 +21,12 @@
 	<div class="row">
 		<section class="col s12 m6 offset-m3">
 			<form action="#" onsubmit="calculo();">
-				<label for="kmLitroCarro">Quantos Quilometros o carro anda por litro</label>
-				<input type="text" id="kmLitroCarro" required="required">
-				<br>
+				<div class="row">
+			        <div class="input-field col s12">
+			           	<input id="kmLitroCarro" type="text" class="validate" required="required">
+          				<label for="kmLitroCarro">Quantos Quilometros o carro anda por litro</label>
+			        </div>
+		      	</div>
 
 				<label for="precoGasolina">Preço litro Gasolina</label>
 				<input type="text" id="precoGasolina" required="required">
@@ -49,24 +52,6 @@
 		</section>
 	</div>
 </div>
-
-	<script type="text/javascript">
-		function calculo() {
-			var distancia = document.getElementById("distancia").value;
-			var kmLitroCarro = document.getElementById("kmLitroCarro").value;
-			var mediaConsumo = distancia / kmLitroCarro;
-			var mediaConsumoFinal = mediaConsumo.toFixed(2);
-
-
-			var precoGasolina = document.getElementById("precoGasolina").value;
-			var precoFinal = precoGasolina * mediaConsumoFinal;
-			console.log(precoFinal);
-
-			document.getElementById("resultadoMediaConsumo").innerHTML = mediaConsumoFinal;
-			document.getElementById("resultadoPreco").innerHTML = precoFinal.toFixed(2);
-
-		}
-	</script>
-	<script src="assets/js/global.js"></script>
+<script src="assets/js/global.js"></script>
 </body>
 </html>
