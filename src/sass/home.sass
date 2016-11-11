@@ -1,11 +1,8 @@
 body
-	background: #3498db
-
-p
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+	background: $primary-color
 
 .top-nav
-	background: #2980b9
+	background: $primary-color-dark
 	padding: 20px 0 0
 	text-align: left
 	color: #ffffff
@@ -13,3 +10,10 @@ p
 	p
 		padding: 0
 		margin: 0
+
+label
+	color: #ffffff
+
+input:focus
+	border-bottom: 1px solid $primary-color-light
+	box-shadow: 0 1px 0 0 $primary-color-light
