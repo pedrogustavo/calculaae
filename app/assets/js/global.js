@@ -4,12 +4,13 @@ function calculo() {
 	var mediaConsumo = distancia / kmLitroCarro;
 	var mediaConsumoFinal = mediaConsumo.toFixed(2);
 
-
 	var precoGasolina = document.getElementById("precoGasolina").value;
 	var precoFinal = precoGasolina * mediaConsumoFinal;
 	console.log(precoFinal);
 
 	document.getElementById("resultadoMediaConsumo").innerHTML = mediaConsumoFinal;
 	document.getElementById("resultadoPreco").innerHTML = precoFinal.toFixed(2);
-
 }
+
+var btn = document.querySelector('.btn');
+btn.addEventListener('click', calculo);
