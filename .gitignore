@@ -1,36 +1,18 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
 
-## Node.js
-lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
-pids
-logs
-results
-npm-debug.log
-node_modules
+# dependencies
+/node_modules
 
-## Bower
-src/components
+# testing
+/coverage
 
-## Sass
-.sass-cache
+# production
+/build
 
-## OS X
+# misc
 .DS_Store
-.AppleDouble
-.LSOverride
-Icon
-._*
-.Spotlight-V100
-.Trashes
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-## Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
