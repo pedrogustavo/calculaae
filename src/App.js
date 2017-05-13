@@ -1,12 +1,11 @@
 import React from 'react';
-const App = () => (
+import Title from './components/Title'
 
+const App = () => (
   <section className="section">
     <div className="columns is-desktop">
       <div className="column is-half is-offset-one-quarter">
-        <h1 className="title">Calcula aê</h1>
-        <h2 className="subtitle">Saiba quanto você vai gastar com combustível</h2>
-
+        <Title title="Calcula aê" subTitle="Saiba quanto você vai gastar com combustível" />
         <div className="field">
           <label className="label" htmlFor="kmLitroCarro">Quantos Quilometros seu carro anda por litro?</label>
           <p className="control">
