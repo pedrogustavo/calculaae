@@ -1,37 +1,17 @@
 import React from 'react';
 import Title from './components/Title'
+import Button from './components/Button'
+import { Input } from './components/Form'
 
 const App = () => (
   <section className="section">
     <div className="columns is-desktop">
       <div className="column is-half is-offset-one-quarter">
         <Title title="Calcula aê" subTitle="Saiba quanto você vai gastar com combustível" />
-        <div className="field">
-          <label className="label" htmlFor="kmLitroCarro">Quantos Quilometros seu carro anda por litro?</label>
-          <p className="control">
-            <input className="input" type="number" id="kmLitroCarro" placeholder="Digite o preço da gasolina" />
-          </p>
-        </div>
-
-        <div className="field">
-          <label className="label" htmlFor="precoGasolina">Preço da Gasolina (litro)</label>
-          <p className="control">
-            <input className="input" type="text" id="precoGasolina" placeholder="Digite o preço da gasolina" />
-          </p>
-        </div>
-
-        <div className="field">
-          <label className="label" htmlFor="distancia">Distancia a ser percorrida (em KM)</label>
-          <p className="control">
-            <input className="input" type="text" id="distancia" placeholder="Digite a distância percorrida" />
-          </p>
-        </div>
-
-        <div className="field">
-          <p className="control">
-            <button className="button is-primary">Enviar</button>
-          </p>
-        </div>
+        <Input id="kmLitroCarro" type="number" textLabel="Quantos Quilometros seu carro anda por litro?" placeHolder="Digite quantos quilometros seu carro faz com 1l" />
+        <Input id="precoGasolina" textLabel="Preço da Gasolina (litro)" placeHolder="Digite o preço da gasolina" />
+        <Input id="distancia" textLabel="Distancia a ser percorrida (em KM)" placeHolder="Digite a distância que irá percorrer" />
+        <Button text="Enviar" handleClick={() => null} />
       </div>
     </div>
   </section>
