@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import reducer from './redux-flow/reducers';
-import './index.css';
-import 'bulma/css/bulma.css';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import reducer from './redux-flow/reducers'
+import './index.css'
+import 'bulma/css/bulma.css'
 
 const store = createStore(reducer)
 

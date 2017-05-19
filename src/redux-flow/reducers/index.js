@@ -1,7 +1,7 @@
 const initialState = {
-  kmPorLitro: 0,
-  precoGasolina: 0,
-  distancia: 0
+  kmLitroCarro: undefined,
+  precoGasolina: undefined,
+  distancia: undefined
 }
 
 export default (state = initialState, action) => {
