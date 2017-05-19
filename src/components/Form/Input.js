@@ -21,7 +21,7 @@ Input.propTypes = {
   type: PropTypes.oneOf(['number', 'text']),
   placeHolder: PropTypes.string,
   onChange: PropTypes.func,
-  value: PropTypes.number,
+  value: PropTypes.string,
 }
 
 export default Input
