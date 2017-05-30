@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Title from './components/Title'
 import { Form } from './components/Form'
+import Result from './components/Result'
 
 class App extends Component {
   constructor() {
@@ -9,15 +10,28 @@ class App extends Component {
     this.state = {
       kmLitroCarro: '',
       precoGasolina: '',
-      distancia: ''
+      distancia: '',
+      result: false
     }
 
     this.handleChange = (field) => (e) => {
       this.setState({ [field]: e.target.value})
     }
 
+    this.calculate = (state) => {
+      const distancia = this.state.distancia
+      const precoGasolina = this.state.precoGasolina
+      const kmLitroCarro = this.state.kmLitroCarro
+
+      let mediaConsumo = distancia / kmLitroCarro
+      let mediaConsumoFinal = mediaConsumo.toFixed(2)
+      
+      let precoFinal = precoGasolina * mediaConsumoFinal
+      return precoFinal
+    }
+
     this.handleClick = () => {
-      console.log(this.state)
+      this.setState({ result: true })
     }
   }
 
@@ -28,6 +42,8 @@ class App extends Component {
           <div className="column is-half is-offset-one-quarter">
             <Title title="Calcula aê" subTitle="Saiba quanto você vai gastar com combustível" />
             <Form {...this.state} handleChange={this.handleChange} handleClick={this.handleClick} />
+            <br />
+            {this.state.result && <Result calculate={this.calculate()}/>}
           </div>
         </div>
       </section>
