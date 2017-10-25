@@ -5,10 +5,7 @@ const Result = ({ calculate }) => (
         <article className='media'>
             <div className='media-content'>
                 <div className='content'>
-                    <p>
-                    <strong>Você irá gastar: </strong>R${calculate}
-                    
-                    </p>
+                    <p><strong>Você irá gastar aproximadamente: </strong>R${calculate}</p>
                 </div>
             </div>
         </article>

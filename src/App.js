@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 import Title from './components/Title'
 import { Form } from './components/Form'
 import Result from './components/Result'
@@ -11,6 +12,8 @@ class App extends Component {
       kmLitroCarro: '',
       precoGasolina: '',
       distancia: '',
+      origem: '',
+      destino: '',
       result: false
     }
 
@@ -19,6 +22,13 @@ class App extends Component {
     }
 
     this.calculate = (state) => {
+      axios.get(`https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&origins=${encodeURI(this.state.origem)}&destinations=${encodeURI(this.state.destino)}&key=AIzaSyBelv2m9VnFqBZJaJl3j2ZUvTztsdb8OFY`)
+        .then((response) => {
+          console.log(response)
+        })
+        .catch((error) => {
+          console.log(error)
+        })
       const distancia = this.state.distancia
       const precoGasolina = this.state.precoGasolina
       const kmLitroCarro = this.state.kmLitroCarro
