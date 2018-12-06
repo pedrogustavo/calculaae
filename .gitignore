@@ -1,36 +1,21 @@
-
-## Node.js
-lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
-pids
-logs
-results
-npm-debug.log
-node_modules
-
-## Bower
-src/components
-
-## Sass
-.sass-cache
-
-## OS X
 .DS_Store
-.AppleDouble
-.LSOverride
-Icon
-._*
-.Spotlight-V100
-.Trashes
+node_modules
+/dist
 
-## Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
